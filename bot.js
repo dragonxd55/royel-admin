@@ -60,7 +60,7 @@ client.on('message', message => {
      });
 
 client.on('message', message => {
-    var prefix = "#"
+    var prefix = "-"
       if (message.author.omar) return;
       if (!message.content.startsWith(prefix)) return;
       var command = message.content.split(" ")[0];
@@ -90,7 +90,7 @@ client.on('message', message => {
   
 
         client.on('message', message => {
-                     var prefix = "#";
+                     var prefix = "-";
             if(message.content === prefix + "muteall") {
                                 if(!message.channel.guild) return message.reply('** This command only for servers**');
      
@@ -120,7 +120,7 @@ client.on('message', message => {
      });
 
 
-   var prefix= "#";
+   var prefix= "-";
     client.on("message", message => {
         if(message.content.startsWith(prefix + 'v')) {
          let args = message.content.split(" ").slice(1);
@@ -134,7 +134,7 @@ client.on('message', message => {
         });
 
  client.on('message', message => {
-var prefix = "#"
+var prefix = "-"
   if (message.author.omar) return;
   if (!message.content.startsWith(prefix)) return;
   var command = message.content.split(" ")[0];
@@ -163,7 +163,7 @@ message.guild.member(user).kick();
 
 
   
-var prefix = "#"
+var prefix = "-"
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -204,7 +204,7 @@ client.on('message', message => {
 });
 
           client.on("message", (message) => {
-            if (message.content.startsWith('#delet')) {
+            if (message.content.startsWith('-delet')) {
 if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**I Don't Have `MANAGE_CHANNELS` Permission**").then(msg => msg.delete(6000))
                 if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("ليس لديك خاصية `MANAGE_CHANNELS` Premissions ");
         
@@ -216,7 +216,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return m
         });
 
 client.on('message', async message =>{
-  var prefix = "#";
+  var prefix = "-";
 
 const ms = require("ms");
 if (message.author.omar) return;
@@ -289,7 +289,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
 
     client.on('message', message => {
         if(!message.channel.guild) return;
-        var prefix = "#";
+        var prefix = "-";
     if(message.content.startsWith(prefix + 'move')) {
         var cmdrole = message.guild.roles.find("name", config.cmdrole)
            if (message.member.hasPermission("MOVE_MEMBERS")) {
@@ -325,7 +325,7 @@ if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return mess
 
 
     client.on('message', message => {
-      var prefix = "#";
+      var prefix = "-";
       if(message.content.startsWith(prefix + 'mutevoice')) {
         if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**ليس لديك صلاحية لاعطاء ميوت صوتي**:x: ").then(m => m.delete(5000));
         if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
@@ -344,7 +344,7 @@ if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return mess
     }
   });
   client.on('message', message => {
-    var prefix = "#";
+    var prefix = "-";
     if(message.content.startsWith(prefix + 'unmutevoice')) {
       if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**ليس لديك صلاحية لاعطاء ميوت صوتي**:x: ").then(m => m.delete(5000));
       if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
@@ -364,7 +364,7 @@ if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return mess
 });
 
 
-var prefix= "#";
+var prefix= "-";
 client.on("message", message => {
     if(message.content.startsWith(prefix + 'cc')) {
      let args = message.content.split(" ").slice(1);
@@ -379,7 +379,7 @@ client.on("message", message => {
     });
 
 client.on("message", message => {
-    var prefix = "#";
+    var prefix = "-";
     const command = message.content.split(" ")[0];
 
     if(command == prefix+"voicekick"){
@@ -409,7 +409,7 @@ client.on("message", message => {
 });
 
 
-var prefix= "#";
+var prefix= "-";
 client.on("message", message => {
     if(message.content.startsWith(prefix + 'ct')) {
      let args = message.content.split(" ").slice(1);
@@ -423,7 +423,7 @@ client.on("message", message => {
     }
     });
 
-var prefix= "#";
+var prefix= "-";
 client.on("message", message => {
     if(message.content.startsWith(prefix + 'cv2')) {
      let args = message.content.split(" ").slice(1);
@@ -439,7 +439,7 @@ client.on("message", message => {
 
 
     client.on('message', message => {
-      var prefix = "#";
+      var prefix = "-";
       if(message.content.startsWith(prefix + 'deafen')) {
     if (message.mentions.users.size === 0 && message.mentions.roles.size === 0) {
       return message.reply('**يجب عليك المنشن اولاّ**:x:').catch(console.error);
@@ -462,7 +462,7 @@ client.on("message", message => {
   });  
   
   client.on('message', async message =>{
-    var prefix = "#";
+    var prefix = "-";
     if(message.content.startsWith(prefix + 'undeafen')) {
   
   if (message.mentions.users.size === 0 && message.mentions.roles.size === 0) {
@@ -486,7 +486,7 @@ client.on("message", message => {
 
 
 client.on("message", message => {
-    var prefix = "#";
+    var prefix = "-";
 	var args = message.content.split(' ').slice(1); 
 	var msg = message.content.toLowerCase();
 	if( !message.guild ) return;
@@ -534,7 +534,7 @@ if(!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return mes
 	} 
 });
 
-var prefix = '!';
+var prefix = '-';
 
 client.on('message', message => {
     if(message.content === prefix + 'createcolors') {
